@@ -1,0 +1,14 @@
+.site-link{
+    @include text-style;
+    font-size: 15px;
+    line-height: 25px;
+    padding: 14px 39px;
+    background-color: $yellow;
+    color: $white;
+    text-decoration: none;
+    border: 3px solid $yellow;
+    &:hover{
+        background-color: transparent;
+        color: $yellow;
+    }
+}

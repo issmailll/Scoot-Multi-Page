@@ -1,0 +1,114 @@
+.scooter{
+    margin-bottom: 200px;
+}
+.scooter__list{
+    @include list-style;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        width: 900px;
+        border: 7px solid #E5ECF4;
+        background-color: #E5ECF4;
+        position: absolute;
+        top: 40px;
+        left: -120px;
+    }
+}
+.scooter__item{
+    max-width: 350px;
+    padding-top: 136px;
+    position: relative;
+    margin-right: 30px;
+    &:nth-child(3n),
+    :last-child{
+        margin-right: 0;
+    }
+    &::before{
+        content: '';
+        display: block;
+        width: 96px;
+        height: 96px;
+        border-radius: 50%;
+        background-color: $yellow;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../../img/scooter_bg-img-app.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+.scooter__item--scooter::before{
+    background-image: url(../../img/scooter_bg-img-scooter.svg);
+}
+.scooter__item--ride::before{
+    background-image: url(../../img/scooter_bg-img-ride.svg);
+}
+.scooter__item-title{
+    @include text-style;
+    font-size: 24px;
+    line-height: 28px;
+    color: $black;
+    margin: 0;
+    margin-bottom: 27px;
+}
+.scooter__item-description{
+    margin: 0;
+    color: $gray;
+}
+@media only screen and (max-width:$tablet){
+    .scooter{
+        margin-bottom: 145px;
+    }
+    .scooter__list{
+        flex-direction: column;
+        &::before{
+            width: 512px;
+            left: -153px;
+            top: 127px;
+            transform: rotate(90deg);
+        }
+    }
+    .scooter__item{
+        max-width: 573px;
+        padding-top: 0;
+        padding-left: 175px;
+        margin-right: 0;
+        margin-bottom: 40px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+@media only screen and (max-width:$mobile){
+    .scooter{
+        margin-bottom: 120px;
+    }
+    .scooter__list::before{
+        display: none;
+    }
+    .scooter__item{
+        max-width: 311px;
+        padding: 0;
+        padding-top: 140px;
+        text-align: center;
+        margin-bottom: 48px;
+        &::before{
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    .scooter__item-title{
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 24px;
+    }
+}

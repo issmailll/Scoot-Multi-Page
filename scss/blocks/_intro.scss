@@ -1,0 +1,118 @@
+.intro{
+    margin-bottom: 160px;
+    padding-top: 153px;
+    padding-bottom: 166px;
+    background-image: url(../../img/intro_bg-img-1x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #2F3B59;
+        opacity: 0.75;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.intro__container{
+    position: relative;
+    z-index: 1;
+    color: $white;
+    &::before{
+        content: '';
+        display: block;
+        width: 160px;
+        border: 7px solid $yellow;
+        background-color: $yellow;
+        background-image: url(../../img/intro_bg-img-path-1.svg);
+        position: absolute;
+        top: 190px;
+        left: -110px;
+    }
+    &::after{
+        content: '';
+        display: block;
+        width: 460px;
+        height: 150px;
+        background-image: url(../../img/intro_bg-img-path-2.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 190px;
+        right: 130px;
+    }
+}
+.intro__content-wrapper{
+    max-width: 500px
+}
+.intro__title{
+    @include text-style;
+    font-size: 56px;
+    line-height: 56px;
+    letter-spacing: -2.5px;
+    margin: 0;
+}
+.intro__text-wrapper{
+    padding-left: 95px;
+    margin-top: 40px;
+}
+.intro__description{
+    margin: 0;
+    margin-bottom: 54px;
+}
+@media only screen and (max-width:$tablet){
+    .intro{
+        margin-bottom: 122px;
+        padding-top: 137px;
+        padding-bottom: 231px;
+        background-image: url(../../img/intro_tablet-bg-img-1x.jpg);
+    }
+    .intro__container{
+        &::before{
+            display: none;
+        }
+        &::after{
+            top: 318px;
+            left: -150px;
+        }
+    }
+    .intro__content-wrapper{
+        max-width: 573px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .intro__text-wrapper{
+        padding-left: 0;
+        margin-top: 24px;
+    }
+    .intro__description{
+        margin-bottom: 46px;
+    }
+}
+@media only screen and (max-width:$mobile){
+    .intro{
+        margin-bottom: 120px;
+        padding: 115px 32px 193px;
+        background-image: url(../../img/intro_mobile-bg-img-1x.jpg);
+    }
+    .intro__container{
+        &::after{
+            top: 363px;
+            left: -320px;
+        }
+    }
+    .intro__content-wrapper{
+        max-width: 311px;
+    }
+    .intro__title{
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: -1.78571px;
+    }
+    .intro__description{
+        margin-bottom: 48px;
+    }
+}

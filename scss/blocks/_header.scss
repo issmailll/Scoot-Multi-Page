@@ -1,0 +1,99 @@
+.header{
+    padding-top: 34px;
+    padding-bottom: 33px;
+    display: flex;
+    align-items: center;
+}
+.header__burger{
+    display: none;
+}
+.header__nav{
+    display: flex;
+}
+.header__site-link{
+    margin-left: 520px;
+}
+@media only screen and (max-width:$tablet){
+    .header__site-link{
+        margin-left: 94px;
+    }
+}
+@media only screen and (max-width:$mobile){
+    .header{
+        position: relative;
+    }
+    .header__nav{
+        display: none;
+    }
+    .site-link--header{
+        display: none;
+    }
+    .header__logo-img{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header__burger{
+        display: block;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        position: relative;
+    }
+    .header__burger::after,
+    .header__burger::before,
+    .header__burger-inner{
+        content: '';
+        display: block;
+        width: 19px;
+        height: 3px;
+        background-color: $yellow;
+    }
+    .header__burger-inner{
+        margin: 2px 0;
+    }
+    .header__burger--opened .header__burger-inner{
+        display: none;
+    }
+    .header__burger--opened::before,
+    .header__burger--opened::after{
+        position: absolute;
+        top: 50%;
+        left: 0;
+    }
+    .header__burger--opened::before{
+        transform: rotate(45deg);
+    }
+    .header__burger--opened::after{
+        transform: rotate(-45deg);
+    }
+    .header--opened .header__nav{
+        display: block;
+    }
+    .header__nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333A44;
+        top: 100%;
+        z-index: 100;
+        height: calc(100vh - 96px);
+    }
+    .header--opened .nav__list{
+        align-items: flex-start;
+        padding-top: 64px;
+        padding-left: 32px;
+        margin-bottom: 339px;
+    }
+    .header--opened .nav__item-link{
+        @include text-style;
+        font-size: 18px;
+        line-height: 25px;
+        color: #E5ECF4;
+    }
+    .header--opened .header__site-link{
+        margin: 0; 
+        margin-left: 32px;
+    }
+}
