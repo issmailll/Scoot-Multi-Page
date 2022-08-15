@@ -56,21 +56,21 @@
         display: none;
     }
     .header__burger--opened::before,
-    .header__burger--opened::after{
+    .header__burger--opened::after {
         position: absolute;
         top: 50%;
         left: 0;
     }
-    .header__burger--opened::before{
+    .header__burger--opened::before {
         transform: rotate(45deg);
     }
-    .header__burger--opened::after{
+    .header__burger--opened::after {
         transform: rotate(-45deg);
     }
-    .header--opened .header__nav{
+    .header--opened .header__nav {
         display: block;
     }
-    .header__nav{
+    .header__nav {
         position: absolute;
         top: 0;
         left: 0;
