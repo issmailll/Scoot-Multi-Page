@@ -1,47 +1,148 @@
 .sign-up{
+    padding: 102px 0;
     background-color: $black;
-    padding: 102px 165px;
+    overflow: hidden;
+}
+.sign-up__container{
+    color: $white;
+    position: relative;
+    &::before,
+    &::after{
+        content: '';
+        display: block;
+        width: 347px;
+        height: 347px;
+        border: 15px solid #E5ECF4;
+        opacity: 0.1;
+        border-radius: 50%;
+        position: absolute;
+    }
+    &::before{
+        top: 48px;
+        left: 285px;
+    }
+    &::after{
+        top: 48px;
+        right: 90px;
+    }
 }
 .sign-up__content-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-grow: 1;
+    &::before{
+        content: '';
+        display: block;
+        width: 347px;
+        height: 347px;
+        background: #E5ECF4;
+        opacity: 0.1;
+        border-radius: 50%;
+        position: absolute;
+        top: 48px;
+        right: -313px;
+    }
 }
-.sign-up__title{
+.sign-up__text{
+    margin: 0;
+    max-width: 415px;
     @include text-style;
     letter-spacing: -2.14286px;
-    max-width: 415px;
-    color: $white;
-    margin: 0;
 }
-.sign-up__link-wrapper{
+.sign-up__img-wrapper{
     display: flex;
     align-items: center;
 }
-.sign-up__appstore-link{
+.sign-up__apple-link{
     margin-right: 18px;
 }
 @media only screen and (max-width:$tablet){
     .sign-up{
-        padding: 62px 155px;
+        padding: 0;
+    }
+    .sign-up__container{
+        padding-top: 62px;
+        padding-bottom: 62px;
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            width: 347px;
+            height: 347px;
+            border: 15px solid #E5ECF4;
+            opacity: 0.1;
+            border-radius: 50%;
+            position: absolute;
+        }
+        &::before{
+            top: 150px;
+            left: -237px;
+        }
+        &::after{
+            top: 150px;
+            right: 220px;
+        }
     }
     .sign-up__content-wrapper{
         flex-direction: column;
         text-align: center;
+        &::before{
+            top: 150px;
+            right: -178px;
+        }
     }
-    .sign-up__title{
+    .sign-up__text{
         max-width: 457px;
         margin-bottom: 40px;
     }
-}
-@media only screen and (max-width:$tablet){
-    .sign-up{
-        padding: 88px 32px;
+    .sign-up__apple-link{
+        margin-right: 13px;
     }
-    .sign-up__title{
+}
+@media only screen and (max-width:$mobile){
+    .sign-up__container{
+        padding-top: 88px;
+        padding-bottom: 88px;
+        &::before,
+        &::after{
+            content: '';
+            display: block;
+            width: 347px;
+            height: 347px;
+            border: 15px solid #E5ECF4;
+            opacity: 0.1;
+            border-radius: 50%;
+            position: absolute;
+        }
+        &::before{
+            top: 147px;
+            left: -219px;
+        }
+        &::after{
+            top: 150px;
+            right: 220px;
+            display: none;
+        }
+    }
+    .sign-up__content-wrapper{
+        flex-direction: column;
+        text-align: center;
+        &::before{
+            top: 147px;
+            right: -219px;
+        }
+    }
+    .sign-up__text{
         max-width: 311px;
         font-size: 32px;
         line-height: 32px;
         letter-spacing: -1.42857px;
+    }
+    .sign-up__apple-link{
+        max-width: 113px;
+    }
+    .sign-up__google-link{
+        max-width: 130px;
     }
 }
