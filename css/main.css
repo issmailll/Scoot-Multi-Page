@@ -575,7 +575,6 @@ a {
 }
 
 .benefits {
-  border: 1px solid red;
   margin-bottom: 329px;
   overflow: hidden;
 }
@@ -673,7 +672,6 @@ a {
     margin-bottom: 118px;
   }
   .benefits__item {
-    border: 1px solid green;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
