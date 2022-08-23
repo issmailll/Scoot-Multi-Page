@@ -81,15 +81,15 @@ a {
   }
 }
 
-.header {
-  padding-top: 34px;
-  padding-bottom: 33px;
+.header__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 34px;
+  padding-bottom: 33px;
 }
 
 .header__burger {
@@ -100,50 +100,57 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.header__site-link {
-  margin-left: 520px;
-}
-
-@media only screen and (max-width: 1140px) {
-  .header__site-link {
-    margin-left: 94px;
-  }
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
 }
 
 @media only screen and (max-width: 719px) {
   .header {
     position: relative;
   }
+  .header__container {
+    padding-top: 22px;
+    padding-bottom: 22px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .header__nav {
     display: none;
   }
-  .site-link--header {
-    display: none;
-  }
-  .header__logo-img {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .header__burger {
     display: block;
-    padding: 0;
     background-color: transparent;
     border: none;
+    padding: 0;
     position: relative;
+    min-width: 20px;
+  }
+  .header__logo-link {
+    margin: 0 auto;
+    padding-right: 20px;
   }
   .header__burger::after,
   .header__burger::before,
   .header__burger-inner {
     content: '';
     display: block;
-    width: 19px;
-    height: 3px;
+    width: 20px;
+    height: 4px;
     background-color: #FCB72B;
-    -webkit-transition: 0.2s ease all;
-    transition: 0.2s ease all;
+    -webkit-transition: 0.5s ease all;
+    transition: 0.5s ease all;
   }
   .header__burger-inner {
     margin: 2px 0;
@@ -158,15 +165,33 @@ a {
     left: 0;
   }
   .header__burger--opened::before {
-    -webkit-transform: translateY(-50%) rotate(45deg);
-            transform: translateY(-50%) rotate(45deg);
+    -webkit-transform: rotate(230deg);
+            transform: rotate(230deg);
   }
   .header__burger--opened::after {
-    -webkit-transform: translateY(-50%) rotate(-45deg);
-            transform: translateY(-50%) rotate(-45deg);
+    -webkit-transform: rotate(-230deg);
+            transform: rotate(-230deg);
   }
   .header--opened .header__nav {
     display: block;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: calc( 100vh - 75px);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(68%, #333a44), color-stop(68%, rgba(0, 0, 0, 0.7)));
+    background-image: linear-gradient(to right, #333a44 68%, rgba(0, 0, 0, 0.7) 68%);
+    top: 100%;
+    left: 0;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+            flex-grow: 5;
+    padding-left: 32px;
+  }
+  .header--opened .header__nav-list {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 270px;
   }
   @-webkit-keyframes nav-open {
     0% {
@@ -187,40 +212,6 @@ a {
       -webkit-transform: translateX(0);
               transform: translateX(0);
     }
-  }
-  .header__nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333A44;
-    top: 100%;
-    z-index: 100;
-    height: calc(100vh - 96px);
-    -webkit-animation: 1s linear nav-open;
-            animation: 1s linear nav-open;
-  }
-  .header--opened .nav__list {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding-top: 64px;
-    padding-left: 32px;
-    margin-bottom: 339px;
-  }
-  .header--opened .nav__item-link {
-    font-family: 'Space Mono';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 48px;
-    font-size: 18px;
-    line-height: 25px;
-    color: #E5ECF4;
-  }
-  .header--opened .header__site-link {
-    margin: 0;
-    margin-left: 32px;
   }
 }
 
@@ -296,6 +287,7 @@ a {
   color: #FFFFFF;
   text-decoration: none;
   border: 3px solid #FCB72B;
+  display: inline-block;
 }
 
 .site-link:hover {
