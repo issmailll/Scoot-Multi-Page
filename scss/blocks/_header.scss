@@ -81,7 +81,8 @@
     }
     .header--opened .header__nav-list{
         align-items: flex-start;
-        margin-bottom: 270px;
+        margin-bottom: 230px;
+        padding-top: 64px;
     }
     @keyframes nav-open{
         0% {
