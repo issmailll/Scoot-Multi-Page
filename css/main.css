@@ -186,6 +186,8 @@ a {
         -ms-flex-positive: 5;
             flex-grow: 5;
     padding-left: 32px;
+    -webkit-animation: nav-open 1s ease;
+            animation: nav-open 1s ease;
   }
   .header--opened .header__nav-list {
     -webkit-box-align: start;
