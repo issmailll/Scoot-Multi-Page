@@ -1199,4 +1199,122 @@ a {
     height: 311px;
   }
 }
+
+.values {
+  margin-bottom: 120px;
+}
+
+.values__title {
+  text-align: center;
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14286px;
+  color: #495567;
+  margin: 0;
+  margin-bottom: 103px;
+}
+
+@media only screen and (max-width: 1140px) {
+  .values__title {
+    margin-bottom: 105px;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .values {
+    margin-bottom: 145px;
+  }
+  .values__title {
+    margin-bottom: 64px;
+  }
+}
+
+.values-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.values-list__item {
+  max-width: 350px;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.values-list__item:last-child {
+  margin-right: 0;
+}
+
+.values-list__img {
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.values-list__span {
+  padding: 34px;
+  border-radius: 50%;
+  background-color: #FCB72B;
+}
+
+.values-list__title {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07143px;
+  color: #495567;
+  margin-top: 66px;
+  margin-bottom: 22px;
+}
+
+.values-list__description {
+  color: #939CAA;
+  margin: 0;
+}
+
+@media only screen and (max-width: 1140px) {
+  .values-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .values-list__item {
+    max-width: 457px;
+    margin-right: 0;
+    margin-bottom: 55px;
+  }
+  .values-list__item:last-child {
+    margin-bottom: 0;
+  }
+  .values-list__title {
+    margin-bottom: 27px;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .values-list__item {
+    max-width: 311px;
+    margin-bottom: 56px;
+  }
+  .values-list__item:last-child {
+    margin-bottom: 0;
+  }
+  .values-list__title {
+    margin-top: 50px;
+    margin-bottom: 27px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
