@@ -1,5 +1,6 @@
 .about-benefits{
     margin-bottom: 120px;
+    overflow-x: hidden;
 }
 .about-benefits__list{
     @include list-style;
@@ -79,7 +80,7 @@
         margin-top: 56px;
     }
 }
-@media only screen and (max-width:$tablet){
+@media only screen and (max-width:$mobile){
     .about-benefits__item{
         flex-direction: column-reverse;
         text-align: center;

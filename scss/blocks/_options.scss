@@ -1,0 +1,124 @@
+.options__list{
+    @include list-style;
+    margin-left: 30px;
+}
+.options__item{
+    min-width: 730px;
+    max-width: 730px;
+    padding: 32px 40px;
+    background-color: #F2F5F9;
+    margin-bottom: 16px;
+    cursor: pointer;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    &:hover{
+        background-color: #FFF4DF;
+    }
+}
+.options__item-content-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.options__title{
+    @include text-style;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -1.07143px;
+    margin: 0;
+    margin-bottom: 24px;
+}
+.options__burger{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    &::before{
+        content: '';
+        display: block;
+        width: 20px;
+        height: 10px;
+        background: url(../../img/burger-arrow.svg) no-repeat center center;
+        position: absolute;
+        top: -15px;
+        left: 0;
+        cursor: pointer;
+        transition: 0.2s ease all;
+    }
+}
+.options__description{
+    margin: 0;
+}
+
+
+.options__burger--closed::before{
+    background: url(../../img/arrow-down.svg) no-repeat center center;
+}
+.options__item--closed .options__description{
+    display: none;
+}
+
+
+.options__burger-scoot--closed::before{
+    background: url(../../img/arrow-down.svg) no-repeat center center;
+}
+.options__item-scoot--closed .options__description{
+    display: none;
+}
+
+
+.options__burger-riding--closed::before{
+    background: url(../../img/arrow-down.svg) no-repeat center center;
+}
+.options__item-riding--closed .options__description{
+    display: none;
+}
+
+
+.options__burger-helmet--closed::before{
+    background: url(../../img/arrow-down.svg) no-repeat center center;
+}
+.options__item-helmet--closed .options__description{
+    display: none;
+}
+
+.options__burger-regulation--closed::before{
+    background: url(../../img/arrow-down.svg) no-repeat center center;
+}
+.options__item-regulation--closed .options__description{
+    display: none;
+}
+
+.options__burger-damage--closed::before{
+    background: url(../../img/arrow-down.svg) no-repeat center center;
+}
+.options__item-damage--closed .options__description{
+    display: none;
+}
+@media only screen and (max-width:$tablet){
+    .options__list{
+        margin-left: 0;
+    }
+    .options__item{
+        min-width: 689px;
+        max-width: 689px;
+        padding: 32px 32px 40px;
+        margin-bottom: 24px;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width:$mobile){
+    .options__item{
+        min-width: 311px;
+        max-width: 311px;
+        padding: 32px 32px 28px 32px;
+        margin-bottom: 16px;
+        cursor: pointer;
+    }
+    .options__title{
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.803571px;
+    }
+}
